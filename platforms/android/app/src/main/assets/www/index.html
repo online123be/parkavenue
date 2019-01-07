@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HAPPP</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+            <style>
+                html, body{
+                    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+                }
+            </style>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+
+
+
+            // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+            //
+            function onDeviceReady() {
+                var ref = window.open('https://apps.happp.be/mistral/', '_blank', 'location=no,toolbar=no');
+                // ref.addEventListener( "loadstart", function(event) {
+                //     if(event.url == 'https://app.versu.be/open/scanner'){
+                //         window.open('http://apache.org', '_blank', 'location=no,toolbar=yes,closebuttoncaption=Sluiten');
+                //     }
+                //  });
+
+                ref.addEventListener('loadstop', function(event) {});
+                ref.addEventListener('loaderror', function(event) {});
+                ref.addEventListener('exit', function(event) {});
+                var notificationOpenedCallback = function(jsonData) {
+                    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+                };
+                
+                window.plugins.OneSignal
+                .startInit("7232d187-1906-468f-a073-5435e09c7f96")
+                .handleNotificationOpened(notificationOpenedCallback)
+                .endInit();
+
+            }        
+
+
+
+
+        
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
