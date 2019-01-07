@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.easybooker.mistralbree" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Mistral Bree</name>
+<widget id="com.compoint.parkavenue" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Park Avenue</name>
     <description>
-        Mistral Bree interactieve app met leuke promo's, nieuws en wedstrijden
+        Park Avenue
     </description>
-    <author email="hello@happp.be" href="http://happp.be">
-        HAPPP
+    <author email="info@online123.be" href="http://online123.be">
+        Online123
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
